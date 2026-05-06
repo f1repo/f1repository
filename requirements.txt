@@ -1,0 +1,8 @@
+streamlit
+pandas
+matplotlib
+fastf1
+requests
+scikit-learn
+groq
+python-dotenv
