@@ -227,6 +227,41 @@ def get_driver_stats(driver_id):
 
 css = """
 <style>
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 80px !important;
+        letter-spacing: -4px !important;
+    }
+    .product-title {
+        font-size: 32px !important;
+    }
+    .product-description {
+        font-size: 14px !important;
+        padding: 0 20px !important;
+    }
+    .stats-bar {
+        flex-direction: column !important;
+        gap: 30px !important;
+        padding: 40px 20px !important;
+    }
+    .stat-value {
+        font-size: 40px !important;
+    }
+    .hero {
+        padding: 100px 20px 80px !important;
+    }
+    .product-section {
+        padding: 80px 20px !important;
+    }
+    .page-title {
+        font-size: 32px !important;
+    }
+    .stTabs [data-baseweb="tab"] {
+        font-size: 9px !important;
+        padding: 12px 8px !important;
+        letter-spacing: 1px !important;
+    }
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
 
 :root{
