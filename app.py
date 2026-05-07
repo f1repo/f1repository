@@ -19,7 +19,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="collapsed"
 )
-)
 
 import tempfile
 cache_dir = tempfile.mkdtemp()
