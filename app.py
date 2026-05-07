@@ -15,9 +15,10 @@ except Exception:
 
 st.set_page_config(
     page_title="F1Repository",
-    page_icon="F1",
+    page_icon="https://i.postimg.cc/xTjBrHHZ/F1Repository-Gold.png",
     layout="wide",
     initial_sidebar_state="collapsed"
+)
 )
 
 import tempfile
