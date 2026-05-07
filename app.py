@@ -260,6 +260,16 @@ css = """
         font-size: 9px !important;
         padding: 12px 8px !important;
         letter-spacing: 1px !important;
+        .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar{
+    height:4px;
+}
+.stTabs [data-baseweb="tab-list"]::-webkit-scrollbar-track{
+    background:#030303;
+}
+.stTabs [data-baseweb="tab-list"]::-webkit-scrollbar-thumb{
+    background:#B8A04A;
+    border-radius:2px;
+}
     }
 }
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
@@ -292,7 +302,12 @@ html,body,[class*="css"]{
 
 .stTabs [data-baseweb="tab-list"]{
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scrollbar-width:thin;
+    scrollbar-color:#B8A04A #030303;
+    -webkit-overflow-scrolling:touch;
     background:rgba(3,3,3,0.98);
     backdrop-filter:blur(30px);
     border-bottom:1px solid rgba(255,255,255,0.025);
