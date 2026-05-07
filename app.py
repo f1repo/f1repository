@@ -20,8 +20,9 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-os.makedirs("cache", exist_ok=True)
-fastf1.Cache.enable_cache("cache")
+import tempfile
+cache_dir = tempfile.mkdtemp()
+fastf1.Cache.enable_cache(cache_dir)
 
 GROQ_KEY = "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"
 
