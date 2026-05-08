@@ -708,17 +708,30 @@ with tabs[8]:
 
 with tabs[9]:
     st.markdown("<div class='page-header'><div class='product-label'>Race Weekend</div><div class='page-title'>Race Countdown</div></div>", unsafe_allow_html=True)
-    CAL = [
-        {"name":"Australian GP","loc":"Melbourne","circuit":"Albert Park","round":1,"date":"2026-03-15 05:00","cancelled":False,"reason":""},
-        {"name":"Chinese GP","loc":"Shanghai","circuit":"Shanghai","round":2,"date":"2026-03-22 07:00","cancelled":False,"reason":""},
-        {"name":"Japanese GP","loc":"Suzuka","circuit":"Suzuka","round":3,"date":"2026-04-05 06:00","cancelled":False,"reason":""},
+        CAL = [
+        {"name":"Australian GP","loc":"Melbourne","circuit":"Albert Park","round":1,"date":"2026-03-08 04:00","cancelled":False,"reason":""},
+        {"name":"Chinese GP","loc":"Shanghai","circuit":"Shanghai","round":2,"date":"2026-03-15 07:00","cancelled":False,"reason":""},
+        {"name":"Japanese GP","loc":"Suzuka","circuit":"Suzuka","round":3,"date":"2026-03-29 05:00","cancelled":False,"reason":""},
         {"name":"Bahrain GP","loc":"Sakhir","circuit":"Bahrain","round":4,"date":"2026-04-12 15:00","cancelled":True,"reason":"Cancelled - West Asia conflicts"},
         {"name":"Saudi Arabian GP","loc":"Jeddah","circuit":"Jeddah","round":5,"date":"2026-04-19 17:00","cancelled":True,"reason":"Cancelled - West Asia conflicts"},
-        {"name":"Miami GP","loc":"Miami","circuit":"Miami","round":6,"date":"2026-05-03 19:00","cancelled":False,"reason":""},
-        {"name":"Monaco GP","loc":"Monte Carlo","circuit":"Monaco","round":8,"date":"2026-05-24 13:00","cancelled":False,"reason":""},
-        {"name":"Spanish GP","loc":"Barcelona","circuit":"Catalunya","round":9,"date":"2026-05-31 13:00","cancelled":False,"reason":""},
-        {"name":"British GP","loc":"Silverstone","circuit":"Silverstone","round":12,"date":"2026-07-05 14:00","cancelled":False,"reason":""},
-        {"name":"Italian GP","loc":"Monza","circuit":"Monza","round":16,"date":"2026-09-06 13:00","cancelled":False,"reason":""},
+        {"name":"Miami GP","loc":"Miami","circuit":"Miami Autodrome","round":6,"date":"2026-05-03 19:30","cancelled":False,"reason":""},
+        {"name":"Canadian GP","loc":"Montreal","circuit":"Gilles Villeneuve","round":7,"date":"2026-05-24 18:00","cancelled":False,"reason":""},
+        {"name":"Monaco GP","loc":"Monte Carlo","circuit":"Monaco","round":8,"date":"2026-06-07 13:00","cancelled":False,"reason":""},
+        {"name":"Spanish GP","loc":"Barcelona","circuit":"Catalunya","round":9,"date":"2026-06-14 13:00","cancelled":False,"reason":""},
+        {"name":"Austrian GP","loc":"Spielberg","circuit":"Red Bull Ring","round":10,"date":"2026-06-28 13:00","cancelled":False,"reason":""},
+        {"name":"British GP","loc":"Silverstone","circuit":"Silverstone","round":11,"date":"2026-07-05 14:00","cancelled":False,"reason":""},
+        {"name":"Belgian GP","loc":"Spa","circuit":"Spa-Francorchamps","round":12,"date":"2026-07-19 13:00","cancelled":False,"reason":""},
+        {"name":"Hungarian GP","loc":"Budapest","circuit":"Hungaroring","round":13,"date":"2026-07-26 13:00","cancelled":False,"reason":""},
+        {"name":"Dutch GP","loc":"Zandvoort","circuit":"Zandvoort","round":14,"date":"2026-08-23 13:00","cancelled":False,"reason":""},
+        {"name":"Italian GP","loc":"Monza","circuit":"Monza","round":15,"date":"2026-09-06 13:00","cancelled":False,"reason":""},
+        {"name":"Madrid GP","loc":"Madrid","circuit":"Madrid Street Circuit","round":16,"date":"2026-09-13 13:00","cancelled":False,"reason":""},
+        {"name":"Azerbaijan GP","loc":"Baku","circuit":"Baku City Circuit","round":17,"date":"2026-09-27 11:00","cancelled":False,"reason":""},
+        {"name":"Singapore GP","loc":"Singapore","circuit":"Marina Bay","round":18,"date":"2026-10-11 12:00","cancelled":False,"reason":""},
+        {"name":"US GP","loc":"Austin","circuit":"COTA","round":19,"date":"2026-10-25 19:00","cancelled":False,"reason":""},
+        {"name":"Mexico GP","loc":"Mexico City","circuit":"Hermanos Rodriguez","round":20,"date":"2026-11-01 20:00","cancelled":False,"reason":""},
+        {"name":"Sao Paulo GP","loc":"Sao Paulo","circuit":"Interlagos","round":21,"date":"2026-11-08 17:00","cancelled":False,"reason":""},
+        {"name":"Las Vegas GP","loc":"Las Vegas","circuit":"Las Vegas Strip","round":22,"date":"2026-11-22 06:00","cancelled":False,"reason":""},
+        {"name":"Qatar GP","loc":"Lusail","circuit":"Lusail","round":23,"date":"2026-11-29 17:00","cancelled":False,"reason":""},
         {"name":"Abu Dhabi GP","loc":"Abu Dhabi","circuit":"Yas Marina","round":24,"date":"2026-12-06 13:00","cancelled":False,"reason":""},
     ]
     now = datetime.datetime.utcnow()
