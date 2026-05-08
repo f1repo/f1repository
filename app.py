@@ -14,7 +14,7 @@ except Exception:
 
 st.set_page_config(
     page_title="F1Repository",
-    page_icon="https://i.postimg.cc/xTjBrHHZ/F1Repository-Gold.png",
+    page_icon="🏆",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
@@ -132,340 +132,65 @@ def get_standings(year, rnd):
 css = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap');
-
-:root{
-    --bg:#030303;
-    --card:rgba(255,255,255,0.012);
-    --card-hover:rgba(255,255,255,0.025);
-    --border:rgba(255,255,255,0.04);
-    --gold:#B8A04A;
-    --platinum:#D4D4D4;
-    --text:#E8E8E8;
-    --muted:#4a4a4a;
-    --dimmed:#707070;
-}
-
+:root{--bg:#030303;--card:rgba(255,255,255,0.012);--card-hover:rgba(255,255,255,0.025);--border:rgba(255,255,255,0.04);--gold:#B8A04A;--platinum:#D4D4D4;--text:#E8E8E8;--muted:#4a4a4a;--dimmed:#707070;}
 .main{background-color:var(--bg);}
 #MainMenu,footer,header{visibility:hidden;}
 section[data-testid="stSidebar"]{display:none;}
-
-html,body,[class*="css"]{
-    font-family:'Inter',sans-serif;
-    -webkit-font-smoothing:antialiased;
-}
-
-.stTabs [data-baseweb="tab-list"]{
-    display:flex;
-    justify-content:flex-start;
-    overflow-x:auto;
-    overflow-y:hidden;
-    background:rgba(3,3,3,0.98);
-    backdrop-filter:blur(30px);
-    border-bottom:1px solid rgba(255,255,255,0.025);
-    padding:0;
-    scrollbar-width:thin;
-    scrollbar-color:#B8A04A #030303;
-    -webkit-overflow-scrolling:touch;
-}
-
+html,body,[class*="css"]{font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased;}
+.stTabs [data-baseweb="tab-list"]{display:flex;justify-content:flex-start;overflow-x:auto;overflow-y:hidden;background:rgba(3,3,3,0.98);backdrop-filter:blur(30px);border-bottom:1px solid rgba(255,255,255,0.025);padding:0;scrollbar-width:thin;scrollbar-color:#B8A04A #030303;-webkit-overflow-scrolling:touch;}
 .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar{height:4px;}
 .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar-track{background:#030303;}
 .stTabs [data-baseweb="tab-list"]::-webkit-scrollbar-thumb{background:#B8A04A;border-radius:2px;}
-
-.stTabs [data-baseweb="tab"]{
-    color:var(--muted);
-    font-size:11px;
-    font-weight:300;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    padding:18px 16px;
-    background:transparent;
-    border:none;
-    border-bottom:1px solid transparent;
-    white-space:nowrap;
-    flex-shrink:0;
-}
-
+.stTabs [data-baseweb="tab"]{color:var(--muted);font-size:11px;font-weight:300;letter-spacing:2px;text-transform:uppercase;padding:18px 16px;background:transparent;border:none;border-bottom:1px solid transparent;white-space:nowrap;flex-shrink:0;}
 .stTabs [data-baseweb="tab"]:hover{color:var(--platinum);}
-.stTabs [aria-selected="true"]{
-    color:var(--gold)!important;
-    border-bottom:1px solid rgba(184,160,74,0.4)!important;
-    font-weight:400;
-}
-
-.hero{
-    text-align:center;
-    padding:120px 20px 100px;
-    max-width:1000px;
-    margin:0 auto;
-}
-
-.hero-tag{
-    font-size:9px;
-    color:var(--gold);
-    font-weight:300;
-    letter-spacing:8px;
-    text-transform:uppercase;
-    margin-bottom:30px;
-    opacity:0.6;
-}
-
-.hero-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:120px;
-    font-weight:300;
-    letter-spacing:-6px;
-    line-height:0.85;
-    margin-bottom:20px;
-    color:#D4D4D4;
-}
-
-.hero-underline{
-    width:40px;
-    height:1px;
-    background:var(--gold);
-    margin:30px auto;
-    opacity:0.3;
-}
-
-.hero-subtitle{
-    font-size:11px;
-    font-weight:200;
-    color:var(--muted);
-    letter-spacing:6px;
-    text-transform:uppercase;
-}
-
-.stats-bar{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:60px;
-    padding:60px 20px;
-    max-width:1100px;
-    margin:0 auto;
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-}
-
+.stTabs [aria-selected="true"]{color:var(--gold)!important;border-bottom:1px solid rgba(184,160,74,0.4)!important;font-weight:400;}
+.hero{text-align:center;padding:120px 20px 100px;max-width:1000px;margin:0 auto;}
+.hero-tag{font-size:9px;color:var(--gold);font-weight:300;letter-spacing:8px;text-transform:uppercase;margin-bottom:30px;opacity:0.6;}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:120px;font-weight:300;letter-spacing:-6px;line-height:0.85;margin-bottom:20px;color:#D4D4D4;}
+.hero-underline{width:40px;height:1px;background:var(--gold);margin:30px auto;opacity:0.3;}
+.hero-subtitle{font-size:11px;font-weight:200;color:var(--muted);letter-spacing:6px;text-transform:uppercase;}
+.stats-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:60px;padding:60px 20px;max-width:1100px;margin:0 auto;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .stat-item{text-align:center;}
-.stat-value{
-    font-family:'Cormorant Garamond',serif;
-    font-size:48px;
-    font-weight:300;
-    color:var(--platinum);
-    letter-spacing:-2px;
-}
-
-.stat-label{
-    font-size:8px;
-    color:var(--muted);
-    text-transform:uppercase;
-    letter-spacing:4px;
-    margin-top:12px;
-    font-weight:300;
-}
-
-.product-section{
-    text-align:center;
-    padding:100px 20px;
-    max-width:650px;
-    margin:0 auto;
-}
-
-.product-label{
-    font-size:9px;
-    color:var(--gold);
-    font-weight:300;
-    letter-spacing:6px;
-    text-transform:uppercase;
-    margin-bottom:24px;
-    opacity:0.6;
-}
-
-.product-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:42px;
-    font-weight:400;
-    color:var(--text);
-    letter-spacing:-1px;
-    line-height:1.12;
-    margin-bottom:24px;
-}
-
-.product-description{
-    font-size:14px;
-    color:var(--muted);
-    max-width:440px;
-    margin:0 auto;
-    line-height:1.9;
-    font-weight:200;
-}
-
-.page-header{
-    text-align:center;
-    padding:80px 20px 40px;
-    max-width:800px;
-    margin:0 auto;
-}
-
-.page-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:38px;
-    font-weight:400;
-    color:var(--text);
-    letter-spacing:-1px;
-    margin-bottom:16px;
-}
-
-.page-subtitle{
-    font-size:13px;
-    color:var(--muted);
-    font-weight:200;
-    line-height:1.7;
-}
-
-.section-title-center{
-    color:var(--gold);
-    font-size:9px;
-    font-weight:300;
-    letter-spacing:5px;
-    text-transform:uppercase;
-    margin-bottom:28px;
-    text-align:center;
-    opacity:0.6;
-}
-
-.feature-card,.info-card,.record-card,.step-card{
-    background:var(--card);
-    border:1px solid var(--border);
-    border-radius:12px;
-}
-
-.feature-card{
-    padding:36px 24px;
-    text-align:center;
-    height:100%;
-}
-
-.feature-card:hover,.info-card:hover,.record-card:hover{
-    background:var(--card-hover);
-}
-
-.feature-name{
-    font-family:'Cormorant Garamond',serif;
-    font-size:18px;
-    font-weight:400;
-    color:var(--text);
-    margin-bottom:14px;
-}
-
-.feature-desc,.info-card-desc,.record-holder{
-    font-size:12px;
-    color:var(--muted);
-    line-height:1.7;
-    font-weight:200;
-}
-
-.info-card,.record-card{
-    padding:24px;
-    margin-bottom:8px;
-}
-
-.info-card-title,.record-title{
-    color:var(--gold);
-    font-size:8px;
-    font-weight:300;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:10px;
-    opacity:0.6;
-}
-
-.info-card-value{
-    font-family:'Cormorant Garamond',serif;
-    color:var(--text);
-    font-size:30px;
-    font-weight:400;
-}
-
-.record-value{
-    font-family:'Cormorant Garamond',serif;
-    color:var(--text);
-    font-size:38px;
-    font-weight:300;
-}
-
-div[data-testid="stButton"]{
-    display:flex;
-    justify-content:center;
-}
-
-.stButton>button{
-    background:transparent;
-    color:var(--gold);
-    border:1px solid rgba(184,160,74,0.25);
-    border-radius:12px;
-    padding:14px 40px;
-    font-size:9px;
-    font-weight:300;
-    letter-spacing:5px;
-    text-transform:uppercase;
-}
-
-.stButton>button:hover{
-    background:rgba(184,160,74,0.08);
-    border-color:rgba(184,160,74,0.4);
-}
-
-.stMetric{
-    background:var(--card);
-    padding:18px;
-    border-radius:12px;
-    border:1px solid var(--border);
-}
-
-.apple-divider,.apple-divider-sm{
-    border:none;
-    height:1px;
-    background:var(--border);
-}
-
+.stat-value{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--platinum);letter-spacing:-2px;}
+.stat-label{font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:4px;margin-top:12px;font-weight:300;}
+.product-section{text-align:center;padding:100px 20px;max-width:650px;margin:0 auto;}
+.product-label{font-size:9px;color:var(--gold);font-weight:300;letter-spacing:6px;text-transform:uppercase;margin-bottom:24px;opacity:0.6;}
+.product-title{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--text);letter-spacing:-1px;line-height:1.12;margin-bottom:24px;}
+.product-description{font-size:14px;color:var(--muted);max-width:440px;margin:0 auto;line-height:1.9;font-weight:200;}
+.page-header{text-align:center;padding:80px 20px 40px;max-width:800px;margin:0 auto;}
+.page-title{font-family:'Cormorant Garamond',serif;font-size:38px;font-weight:400;color:var(--text);letter-spacing:-1px;margin-bottom:16px;}
+.page-subtitle{font-size:13px;color:var(--muted);font-weight:200;line-height:1.7;}
+.section-title-center{color:var(--gold);font-size:9px;font-weight:300;letter-spacing:5px;text-transform:uppercase;margin-bottom:28px;text-align:center;opacity:0.6;}
+.feature-card,.info-card,.record-card,.step-card{background:var(--card);border:1px solid var(--border);border-radius:12px;}
+.feature-card{padding:36px 24px;text-align:center;height:100%;}
+.feature-card:hover,.info-card:hover,.record-card:hover{background:var(--card-hover);}
+.feature-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--text);margin-bottom:14px;}
+.feature-desc,.info-card-desc,.record-holder{font-size:12px;color:var(--muted);line-height:1.7;font-weight:200;}
+.info-card,.record-card{padding:24px;margin-bottom:8px;}
+.info-card-title,.record-title{color:var(--gold);font-size:8px;font-weight:300;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px;opacity:0.6;}
+.info-card-value{font-family:'Cormorant Garamond',serif;color:var(--text);font-size:30px;font-weight:400;}
+.record-value{font-family:'Cormorant Garamond',serif;color:var(--text);font-size:38px;font-weight:300;}
+div[data-testid="stButton"]{display:flex;justify-content:center;}
+.stButton>button{background:transparent;color:var(--gold);border:1px solid rgba(184,160,74,0.25);border-radius:12px;padding:14px 40px;font-size:9px;font-weight:300;letter-spacing:5px;text-transform:uppercase;}
+.stButton>button:hover{background:rgba(184,160,74,0.08);border-color:rgba(184,160,74,0.4);}
+.stMetric{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--border);}
+.apple-divider,.apple-divider-sm{border:none;height:1px;background:var(--border);}
 .apple-divider{margin:0;}
 .apple-divider-sm{margin:50px 0;}
-
-.clean-footer{
-    text-align:center;
-    padding:80px 20px;
-    border-top:1px solid var(--border);
-    margin-top:120px;
-}
-
-.stSelectbox label,.stSlider label{
-    color:var(--muted)!important;
-    font-size:9px!important;
-    font-weight:200!important;
-    letter-spacing:4px!important;
-    text-transform:uppercase!important;
-}
-
-.stDataFrame{
-    border-radius:12px;
-    overflow:hidden;
-    border:1px solid var(--border);
-}
-
-@media (max-width: 768px) {
-    .hero-title{font-size:70px !important; letter-spacing:-3px !important;}
+.clean-footer{text-align:center;padding:80px 20px;border-top:1px solid var(--border);margin-top:120px;}
+.stSelectbox label,.stSlider label{color:var(--muted)!important;font-size:9px!important;font-weight:200!important;letter-spacing:4px!important;text-transform:uppercase!important;}
+.stDataFrame{border-radius:12px;overflow:hidden;border:1px solid var(--border);}
+@media (max-width: 768px){
+    .hero-title{font-size:70px !important;letter-spacing:-3px !important;}
     .product-title{font-size:28px !important;}
-    .product-description{font-size:13px !important; padding:0 16px !important;}
-    .stats-bar{flex-direction:column !important; gap:25px !important; padding:40px 20px !important;}
+    .product-description{font-size:13px !important;padding:0 16px !important;}
+    .stats-bar{flex-direction:column !important;gap:25px !important;padding:40px 20px !important;}
     .stat-value{font-size:36px !important;}
     .hero{padding:80px 16px 60px !important;}
     .product-section{padding:60px 16px !important;}
     .page-title{font-size:28px !important;}
     .page-header{padding:60px 16px 30px !important;}
-    .stTabs [data-baseweb="tab"]{font-size:9px !important; padding:14px 10px !important; letter-spacing:1px !important;}
+    .stTabs [data-baseweb="tab"]{font-size:9px !important;padding:14px 10px !important;letter-spacing:1px !important;}
     .feature-name{font-size:16px !important;}
     .info-card-value{font-size:24px !important;}
     .record-value{font-size:30px !important;}
@@ -491,7 +216,7 @@ with tabs[0]:
         <div class='stat-item'><div class='stat-value'>75+</div><div class='stat-label'>Years</div></div>
         <div class='stat-item'><div class='stat-value'>1100+</div><div class='stat-label'>Races</div></div>
         <div class='stat-item'><div class='stat-value'>860+</div><div class='stat-label'>Drivers</div></div>
-        <div class='stat-item'><div class='stat-value'>24</div><div class='stat-label'>Circuits</div></div>
+        <div class='stat-item'><div class='stat-value'>22</div><div class='stat-label'>Circuits</div></div>
     </div>
     """, unsafe_allow_html=True)
 
@@ -671,7 +396,7 @@ with tabs[7]:
         d1n = st.selectbox("Driver 1", HEAD_TO_HEAD_DRIVERS, index=0, key="d1n")
     with col2:
         d2n = st.selectbox("Driver 2", HEAD_TO_HEAD_DRIVERS, index=1, key="d2n")
-    st.info("Career comparison coming soon. Feature is in active development.")
+    st.info("Career comparison coming soon. Feature in active development.")
 
 with tabs[8]:
     st.markdown("<div class='page-header'><div class='product-label'>Meet Roman</div><div class='page-title'>Your F1 companion.</div></div>", unsafe_allow_html=True)
@@ -708,31 +433,29 @@ with tabs[8]:
 
 with tabs[9]:
     st.markdown("<div class='page-header'><div class='product-label'>Race Weekend</div><div class='page-title'>Race Countdown</div></div>", unsafe_allow_html=True)
-        CAL = [
+    CAL = [
         {"name":"Australian GP","loc":"Melbourne","circuit":"Albert Park","round":1,"date":"2026-03-08 04:00","cancelled":False,"reason":""},
         {"name":"Chinese GP","loc":"Shanghai","circuit":"Shanghai","round":2,"date":"2026-03-15 07:00","cancelled":False,"reason":""},
         {"name":"Japanese GP","loc":"Suzuka","circuit":"Suzuka","round":3,"date":"2026-03-29 05:00","cancelled":False,"reason":""},
-        {"name":"Bahrain GP","loc":"Sakhir","circuit":"Bahrain","round":4,"date":"2026-04-12 15:00","cancelled":True,"reason":"Cancelled - West Asia conflicts"},
-        {"name":"Saudi Arabian GP","loc":"Jeddah","circuit":"Jeddah","round":5,"date":"2026-04-19 17:00","cancelled":True,"reason":"Cancelled - West Asia conflicts"},
-        {"name":"Miami GP","loc":"Miami","circuit":"Miami Autodrome","round":6,"date":"2026-05-03 19:30","cancelled":False,"reason":""},
-        {"name":"Canadian GP","loc":"Montreal","circuit":"Gilles Villeneuve","round":7,"date":"2026-05-24 18:00","cancelled":False,"reason":""},
-        {"name":"Monaco GP","loc":"Monte Carlo","circuit":"Monaco","round":8,"date":"2026-06-07 13:00","cancelled":False,"reason":""},
-        {"name":"Spanish GP","loc":"Barcelona","circuit":"Catalunya","round":9,"date":"2026-06-14 13:00","cancelled":False,"reason":""},
-        {"name":"Austrian GP","loc":"Spielberg","circuit":"Red Bull Ring","round":10,"date":"2026-06-28 13:00","cancelled":False,"reason":""},
-        {"name":"British GP","loc":"Silverstone","circuit":"Silverstone","round":11,"date":"2026-07-05 14:00","cancelled":False,"reason":""},
-        {"name":"Belgian GP","loc":"Spa","circuit":"Spa-Francorchamps","round":12,"date":"2026-07-19 13:00","cancelled":False,"reason":""},
-        {"name":"Hungarian GP","loc":"Budapest","circuit":"Hungaroring","round":13,"date":"2026-07-26 13:00","cancelled":False,"reason":""},
-        {"name":"Dutch GP","loc":"Zandvoort","circuit":"Zandvoort","round":14,"date":"2026-08-23 13:00","cancelled":False,"reason":""},
-        {"name":"Italian GP","loc":"Monza","circuit":"Monza","round":15,"date":"2026-09-06 13:00","cancelled":False,"reason":""},
-        {"name":"Madrid GP","loc":"Madrid","circuit":"Madrid Street Circuit","round":16,"date":"2026-09-13 13:00","cancelled":False,"reason":""},
-        {"name":"Azerbaijan GP","loc":"Baku","circuit":"Baku City Circuit","round":17,"date":"2026-09-27 11:00","cancelled":False,"reason":""},
-        {"name":"Singapore GP","loc":"Singapore","circuit":"Marina Bay","round":18,"date":"2026-10-11 12:00","cancelled":False,"reason":""},
-        {"name":"US GP","loc":"Austin","circuit":"COTA","round":19,"date":"2026-10-25 19:00","cancelled":False,"reason":""},
-        {"name":"Mexico GP","loc":"Mexico City","circuit":"Hermanos Rodriguez","round":20,"date":"2026-11-01 20:00","cancelled":False,"reason":""},
-        {"name":"Sao Paulo GP","loc":"Sao Paulo","circuit":"Interlagos","round":21,"date":"2026-11-08 17:00","cancelled":False,"reason":""},
-        {"name":"Las Vegas GP","loc":"Las Vegas","circuit":"Las Vegas Strip","round":22,"date":"2026-11-22 06:00","cancelled":False,"reason":""},
-        {"name":"Qatar GP","loc":"Lusail","circuit":"Lusail","round":23,"date":"2026-11-29 17:00","cancelled":False,"reason":""},
-        {"name":"Abu Dhabi GP","loc":"Abu Dhabi","circuit":"Yas Marina","round":24,"date":"2026-12-06 13:00","cancelled":False,"reason":""},
+        {"name":"Miami GP","loc":"Miami","circuit":"Miami Autodrome","round":4,"date":"2026-05-03 19:30","cancelled":False,"reason":""},
+        {"name":"Canadian GP","loc":"Montreal","circuit":"Gilles Villeneuve","round":5,"date":"2026-05-24 18:00","cancelled":False,"reason":""},
+        {"name":"Monaco GP","loc":"Monte Carlo","circuit":"Monaco","round":6,"date":"2026-06-07 13:00","cancelled":False,"reason":""},
+        {"name":"Spanish GP","loc":"Barcelona","circuit":"Catalunya","round":7,"date":"2026-06-14 13:00","cancelled":False,"reason":""},
+        {"name":"Austrian GP","loc":"Spielberg","circuit":"Red Bull Ring","round":8,"date":"2026-06-28 13:00","cancelled":False,"reason":""},
+        {"name":"British GP","loc":"Silverstone","circuit":"Silverstone","round":9,"date":"2026-07-05 14:00","cancelled":False,"reason":""},
+        {"name":"Belgian GP","loc":"Spa","circuit":"Spa-Francorchamps","round":10,"date":"2026-07-19 13:00","cancelled":False,"reason":""},
+        {"name":"Hungarian GP","loc":"Budapest","circuit":"Hungaroring","round":11,"date":"2026-07-26 13:00","cancelled":False,"reason":""},
+        {"name":"Dutch GP","loc":"Zandvoort","circuit":"Zandvoort","round":12,"date":"2026-08-23 13:00","cancelled":False,"reason":""},
+        {"name":"Italian GP","loc":"Monza","circuit":"Monza","round":13,"date":"2026-09-06 13:00","cancelled":False,"reason":""},
+        {"name":"Madrid GP","loc":"Madrid","circuit":"Madrid Street Circuit","round":14,"date":"2026-09-13 13:00","cancelled":False,"reason":""},
+        {"name":"Azerbaijan GP","loc":"Baku","circuit":"Baku City Circuit","round":15,"date":"2026-09-26 11:00","cancelled":False,"reason":""},
+        {"name":"Singapore GP","loc":"Singapore","circuit":"Marina Bay","round":16,"date":"2026-10-11 12:00","cancelled":False,"reason":""},
+        {"name":"US GP","loc":"Austin","circuit":"COTA","round":17,"date":"2026-10-25 19:00","cancelled":False,"reason":""},
+        {"name":"Mexico GP","loc":"Mexico City","circuit":"Hermanos Rodriguez","round":18,"date":"2026-11-01 20:00","cancelled":False,"reason":""},
+        {"name":"Sao Paulo GP","loc":"Sao Paulo","circuit":"Interlagos","round":19,"date":"2026-11-08 17:00","cancelled":False,"reason":""},
+        {"name":"Las Vegas GP","loc":"Las Vegas","circuit":"Las Vegas Strip","round":20,"date":"2026-11-21 06:00","cancelled":False,"reason":""},
+        {"name":"Qatar GP","loc":"Lusail","circuit":"Lusail","round":21,"date":"2026-11-29 17:00","cancelled":False,"reason":""},
+        {"name":"Abu Dhabi GP","loc":"Abu Dhabi","circuit":"Yas Marina","round":22,"date":"2026-12-06 13:00","cancelled":False,"reason":""},
     ]
     now = datetime.datetime.utcnow()
     next_race = None
@@ -771,7 +494,7 @@ with tabs[10]:
 with tabs[11]:
     st.markdown("<div class='page-header'><div class='product-label'>About</div><div class='page-title'>F1Repository</div></div>", unsafe_allow_html=True)
     st.markdown("<div class='product-section'><div class='product-label'>Mission</div><div class='product-title'>F1 data for everyone.</div><div class='product-description'>Built to give every fan professional-level F1 data. From 1950 to today.</div></div>", unsafe_allow_html=True)
-    st.markdown("<div class='product-section'><div class='product-label'>Roman</div><div class='product-title'>Named after a good dog.</div><div class='product-description'>Our AI assistant knows everything about F1. Ask him anything.</div></div>", unsafe_allow_html=True)
+    st.markdown("<div class='product-section'><div class='product-label'>Roman</div><div class='product-title'>Named after a good dog.</div><div class='product-description'>Our AI assistant knows everything about F1.</div></div>", unsafe_allow_html=True)
     st.markdown("<div class='product-section'><div class='product-label'>Connect</div><div class='product-title'>@f1repository</div><div class='product-description'>Follow on Instagram for daily F1 content.</div></div>", unsafe_allow_html=True)
 
 st.markdown("""
